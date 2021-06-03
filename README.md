@@ -44,7 +44,7 @@ Shuffling the validation or test dataset might even result in “better” stats
 
 
 
-model.eval()来区分
+
 
 
 
