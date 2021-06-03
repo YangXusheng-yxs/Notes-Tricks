@@ -1,2 +1,3 @@
-记录pytorch中BN的几个坑
+## 璁板綍pytorch涓瑽N鐨勫嚑涓潙
 Siamese network
+
