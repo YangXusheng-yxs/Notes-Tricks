@@ -1,6 +1,6 @@
 ## 记录pytorch中BN的几个坑
 
-最近参考对比学习中的Siamese network实现提取表征的功能，其中Projection network和Prediction network用到了Batchnorm1d layer，但是eval模式下结果远差于train模式（valid_loss直接形如nike的logo起飞了。。），让我很费解，自己统计了训练集和验证集的均值和方差可以认为是同分布的，因此推理大概率不是数据本身的问题而是代码环节出了问题。这个Layer有几点需要注意的，特此记录几个坑。
+最近参考对比学习中的Siamese network实现提取表征的功能，其中Projection network和Prediction network用到了Batchnorm1d layer，但是eval模式下结果远差于train模式（valid_loss直接形如nike的logo起飞了。。。），让我很费解，自己统计了训练集和验证集的均值和方差可以认为是同分布的，因此推理大概率不是数据本身的问题而是代码环节出了问题。这个Layer有几点需要注意的，特此记录几个坑。
 
 首先，必须提一下Pytorch的社区维护还是蛮好的，有很多小坑都会给出专业解答，对用户很有帮助。Pytorch中的model.train()和model.eval()也是十分不错的设计，需要正确结合batchnorm一起使用。主要参考了几篇blog和社区response。
 
